@@ -82,8 +82,27 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-white p-8">
       <div className="max-w-6xl mx-auto">
-        <h1 className="text-3xl font-bold mb-8 text-gray-900">Contacts</h1>
+        {/* Event Details Header */}
+        <div className="mb-12">
+          <h1 className="text-3xl font-bold mb-6 text-gray-900">Participants</h1>
+          
+          <div className="bg-gray-50 border border-gray-200 rounded p-6 mb-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div>
+                <p className="text-sm font-semibold text-gray-600 uppercase tracking-wide">Date & Time</p>
+                <p className="text-lg text-gray-900 mt-1">10:00 AM (Qatar Time)</p>
+                <p className="text-lg text-gray-900">July 29th, 2023</p>
+              </div>
+              <div>
+                <p className="text-sm font-semibold text-gray-600 uppercase tracking-wide">Location</p>
+                <p className="text-lg text-gray-900 mt-1">Qatar Free Zone Authority</p>
+                <p className="text-lg text-gray-900">Auditorium</p>
+              </div>
+            </div>
+          </div>
+        </div>
 
+        {/* Contacts Table */}
         <div className="border border-gray-200 rounded">
           <Table>
             <TableHeader>
