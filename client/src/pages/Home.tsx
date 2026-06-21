@@ -10,8 +10,8 @@ import {
 interface Contact {
   name: string;
   company: string;
-  country: string;
-  type: "OnSite" | "OnLine";
+  country: "Qatar" | "Saudi Arabia" | "Oman";
+  type: "OnSite" | "OnLine" | "Not Confirmed";
 }
 
 const contacts: Contact[] = [
@@ -45,7 +45,19 @@ const contacts: Contact[] = [
     country: "Qatar",
     type: "OnSite",
   },
+  {
+    name: "Person 1",
+    company: "Confidential",
+    country: "Oman",
+    type: "Not Confirmed",
+  },
 ];
+
+const countryFlags: Record<string, string> = {
+  Qatar: "🇶🇦",
+  "Saudi Arabia": "🇸🇦",
+  Oman: "🇴🇲",
+};
 
 export default function Home() {
   return (
@@ -58,13 +70,13 @@ export default function Home() {
             <TableHeader>
               <TableRow className="bg-gray-50">
                 <TableHead className="text-gray-900 font-semibold">
+                  Country
+                </TableHead>
+                <TableHead className="text-gray-900 font-semibold">
                   Name
                 </TableHead>
                 <TableHead className="text-gray-900 font-semibold">
                   Company
-                </TableHead>
-                <TableHead className="text-gray-900 font-semibold">
-                  Country
                 </TableHead>
                 <TableHead className="text-gray-900 font-semibold">
                   Type
@@ -74,12 +86,12 @@ export default function Home() {
             <TableBody>
               {contacts.map((contact, index) => (
                 <TableRow key={index} className="border-t border-gray-200">
+                  <TableCell className="text-gray-900 text-lg font-semibold">
+                    {countryFlags[contact.country]} {contact.country}
+                  </TableCell>
                   <TableCell className="text-gray-900">{contact.name}</TableCell>
                   <TableCell className="text-gray-900">
                     {contact.company}
-                  </TableCell>
-                  <TableCell className="text-gray-900">
-                    {contact.country}
                   </TableCell>
                   <TableCell className="text-gray-900">{contact.type}</TableCell>
                 </TableRow>
