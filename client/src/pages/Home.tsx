@@ -10,8 +10,8 @@ import {
 interface Contact {
   name: string;
   company: string;
-  country: "Qatar" | "Saudi Arabia" | "Oman";
-  type: "OnSite" | "OnLine" | "Not Confirmed";
+  country: "Qatar" | "Saudi Arabia" | "Oman" | "South Africa";
+  type: "OnSite" | "OnLine" | "Online/Onsite" | "Not Confirmed";
 }
 
 const contacts: Contact[] = [
@@ -24,6 +24,12 @@ const contacts: Contact[] = [
   {
     name: "Mr. Ghassan Merhi",
     company: "Victoria Interlink",
+    country: "Qatar",
+    type: "OnSite",
+  },
+  {
+    name: "Miss Ibtissam",
+    company: "Roya Holding",
     country: "Qatar",
     type: "OnSite",
   },
@@ -51,12 +57,25 @@ const contacts: Contact[] = [
     country: "Oman",
     type: "Not Confirmed",
   },
+  {
+    name: "Mr. Mike Rekopane",
+    company: "Not specified",
+    country: "South Africa",
+    type: "Not Confirmed",
+  },
+  {
+    name: "Mr. T Rekopane",
+    company: "Not specified",
+    country: "South Africa",
+    type: "Not Confirmed",
+  },
 ];
 
 const countryFlags: Record<string, string> = {
   Qatar: "🇶🇦",
   "Saudi Arabia": "🇸🇦",
   Oman: "🇴🇲",
+  "South Africa": "🇿🇦",
 };
 
 export default function Home() {
