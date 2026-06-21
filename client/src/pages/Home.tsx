@@ -6,6 +6,9 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
+import { Button } from "@/components/ui/button";
+import { Link } from "wouter";
+import { MapPin, Navigation, Train, Car } from "lucide-react";
 
 interface Contact {
   name: string;
@@ -95,14 +98,47 @@ export default function Home() {
               </div>
               <div>
                 <p className="text-sm font-semibold text-gray-600 uppercase tracking-wide">Location</p>
-                <p className="text-lg text-gray-900 mt-1">Qatar Free Zone Authority</p>
-                <p className="text-lg text-gray-900">Auditorium</p>
+<p className="text-lg text-gray-900 mt-1">Qatar Free Zones Authority (QFZ) - Business Innovation Park (Auditorium)</p>
+                <div className="flex gap-4 mt-2">
+                  <a 
+                    href="https://www.google.com/maps/place/QFZ+Business+Innovation+Park/@25.2516,51.6014,17z" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-blue-600 hover:underline flex items-center gap-1 text-sm font-medium"
+                  >
+                    <MapPin className="w-4 h-4" /> Google Maps
+                  </a>
+                  <a 
+                    href="https://www.waze.com/live-map/directions/qa/doha-municipality/doha/qatar-free-zones-authority-(qfz)-business-innovation-park?to=place.ChIJr15cHLTORT4R3KfUlW-Pcyc" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-[#33ccff] hover:underline flex items-center gap-1 text-sm font-medium"
+                  >
+                    <Navigation className="w-4 h-4" /> Waze
+                  </a>
+                </div>
               </div>
-            </div>
-          </div>
-        </div>
+</div>
+	          </div>
 
-        {/* Contacts Table */}
+            {/* Navigation Buttons */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+              <Link href="/own-care">
+                <Button className="w-full py-6 text-lg flex items-center justify-center gap-2 bg-gray-900 hover:bg-gray-800">
+                  <Car className="w-5 h-5" />
+                  Through your own care
+                </Button>
+              </Link>
+              <Link href="/metro">
+                <Button className="w-full py-6 text-lg flex items-center justify-center gap-2 bg-red-600 hover:bg-red-500">
+                  <Train className="w-5 h-5" />
+                  Through Metro
+                </Button>
+              </Link>
+            </div>
+	        </div>
+	
+	        {/* Contacts Table */}
         <div className="border border-gray-200 rounded">
           <Table>
             <TableHeader>
