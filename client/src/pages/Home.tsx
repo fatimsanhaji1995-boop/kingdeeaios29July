@@ -98,7 +98,7 @@ export default function Home() {
               </div>
               <div>
                 <p className="text-sm font-semibold text-gray-600 uppercase tracking-wide">Location</p>
-<p className="text-lg text-gray-900 mt-1">Qatar Free Zones Authority (QFZ) - Business Innovation Park (Auditorium)</p>
+<p className="text-lg text-gray-900 mt-1">Business Innovation Park (QFZA)</p>
                 <div className="flex gap-4 mt-2">
                   <a 
                     href="https://www.google.com/maps/place/QFZ+Business+Innovation+Park/@25.2516,51.6014,17z" 
@@ -126,7 +126,7 @@ export default function Home() {
               <Link href="/own-care">
                 <Button className="w-full py-6 text-lg flex items-center justify-center gap-2 bg-gray-900 hover:bg-gray-800">
                   <Car className="w-5 h-5" />
-                  Through your own care
+                  Through your own Car
                 </Button>
               </Link>
               <Link href="/metro">

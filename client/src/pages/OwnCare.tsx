@@ -13,8 +13,8 @@ export default function OwnCare() {
           <Button variant="ghost" className="mb-8">← Back to Participants</Button>
         </Link>
         
-        <h1 className="text-3xl font-bold mb-4 text-gray-900">Through your own care</h1>
-        <p className="text-gray-600 mb-12">Click below to get directions to Qatar Free Zones Authority (QFZ) - Business Innovation Park</p>
+        <h1 className="text-3xl font-bold mb-4 text-gray-900">Through your own Car</h1>
+        <p className="text-gray-600 mb-12">Click below to get directions to Business Innovation Park (QFZA)</p>
 
         <div className="grid gap-6">
           <a href={googleMapsUrl} target="_blank" rel="noopener noreferrer">
